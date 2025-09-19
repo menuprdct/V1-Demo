@@ -182,7 +182,7 @@ export default function Dashboard() {
   const handleInputChange = (field: keyof FormData) => (
     e: React.ChangeEvent<HTMLInputElement>
   ): void => {
-    const { value, type } = e.target;
+    const { value } = e.target;
     
     if (field === 'price') {
       const numValue = parseFloat(value) || 0;
