@@ -5,12 +5,6 @@ import { createContext, useState, useMemo, Dispatch, SetStateAction } from "reac
 
 type Language = "en" | "ar";
 
-type Translations = {
-  [key in Language]: {
-    [key: string]: string;
-  };
-};
-
 
 interface LangContextType {
   lang: Language;

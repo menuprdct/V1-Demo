@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { X, Edit, Trash2, Plus, Image } from 'lucide-react';
+import { Edit, Trash2, Plus, Image } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { Modal } from '@/subComp/modal';
 
