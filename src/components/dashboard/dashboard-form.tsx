@@ -57,16 +57,20 @@ const translations = {
 
 // Get translation function
 const t = (path: string): string => {
-  const keys = path.split('.');
-  let value: any = translations;
-  
+  const keys = path.split(".");
+  let value: unknown = translations;
+
   for (const key of keys) {
-    value = value[key];
-    if (!value) return path; // Return path if translation not found
+    if (typeof value === "object" && value !== null && key in value) {
+      value = (value as Record<string, unknown>)[key];
+    } else {
+      return path; // Return path if translation not found
+    }
   }
-  
-  return value;
+
+  return typeof value === "string" ? value : path;
 };
+
 
 // Types based on your database schema
 interface FoodItem {
