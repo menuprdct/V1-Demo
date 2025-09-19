@@ -1,0 +1,57 @@
+.slider3d-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 260px;
+  margin-bottom: 1rem;
+}
+.slider3d-arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+  z-index: 3;
+  transition: color 0.2s;
+}
+.slider3d-arrow:hover {
+  color: #222;
+}
+.slider3d-arrow.left {
+  margin-right: 10px;
+}
+.slider3d-arrow.right {
+  margin-left: 10px;
+}
+.slider3d-perspective {
+  perspective: 1000px;
+  width: 340px;
+  height: 240px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider3d-image {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  background: #fff;
+}
+.slider3d-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+.slider3d-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.slider3d-dot.active {
+  background: #333;
+}
